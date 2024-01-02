@@ -1,3 +1,6 @@
+
+//THIS COMPONENT IS FOR THE POST ITSELF, IT HAS THE EDIT, DELETE AND LIKE
+
 import React, { useEffect, useState } from 'react';
 import { PostData } from '../../lib/types';
 import { deletePost } from '../../lib/deletePost';

@@ -80,6 +80,13 @@ function Signup() {
               onChange={handleInputChange}
             />
             <input
+              type="text"
+              placeholder="Enter your Username"
+              name="username"
+              value={userData.username}
+              onChange={handleInputChange}
+            />
+            <input
               type="password"
               placeholder="Enter your Password"
               name="password"

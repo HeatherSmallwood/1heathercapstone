@@ -1,3 +1,4 @@
+//THIS COMPOENNT IS TO ADD THE POST, IT HAS THE BUTTON THAT UPLAODS THE PHOTO AND THE INPUT FOR THE POST TEXT
 import React, { useState, ChangeEvent } from 'react';
 import { addPost } from '../../lib/addPost';
 import { convertImageToBase64 } from '../../lib/convertImageTo64';

@@ -28,7 +28,7 @@ function SignIn() {
         console.log("asba",response)
   
         if (!response.ok) {
-          throw new Error('Failed to create account. Please try again.');
+          throw new Error('Wrong Credentials. Please try again.');
         }
   
         const responseData = await response.json();
@@ -65,7 +65,7 @@ function SignIn() {
         <div className='flex flex-col gap-3 w-full '>
         <input
           type="text"
-          placeholder="Enter your Instagram username"
+          placeholder="Enter your Instagram username | Email"
           name="username"
           value={userData.username}
           onChange={handleInputChange}
