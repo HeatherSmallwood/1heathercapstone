@@ -1,7 +1,7 @@
 
 const NotLoggedInHome = () => {
   return (
-    <div className="flex flex-col gap-5 items-center">
+    <div className="notLoggedIn">
  
     <a href="/sign-in">
       <button type="submit">Sign In</button>
