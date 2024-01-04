@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+
 import InstaData from './InstaData';
+
 
 function Signup() {
   const [userData, setUserData] = useState({
     username: '',
-    imgBase64: '', // Add other required fields here
+    imgBase64: '', 
     fullName: '',
     password: '',
     email: ''
@@ -56,21 +58,18 @@ function Signup() {
   };
 
   return (
-    <div className='flex flex-col gap-4 items-center px-2'>
+    <div className='signup-container'>
       <h1>Sign Up</h1>
-      {error && <p className='text-red-600'>{error}</p>}
-
-        {!isInstaData ? (
-                <form onSubmit={handleSubmit} className='flex flex-col gap-3 w-full '>
-
-          <div className='flex flex-col gap-3 w-full '>
-       
-            <input
-              type="text"
-              placeholder="Enter your Full Name"
-              name="fullName"
-              value={userData.fullName}
-              onChange={handleInputChange}
+      {error && <p className='error-message'>{error}</p>}
+      {!isInstaData ? (
+        <form onSubmit={handleSubmit} className='signup-form'>
+          <input
+            type="text"
+            placeholder="Enter your Full Name"
+            name="fullName"
+            value={userData.fullName}
+            onChange={handleInputChange}
+            className='inputbtn2'
             />
             <input
               type="text"
@@ -78,6 +77,8 @@ function Signup() {
               name="email"
               value={userData.email}
               onChange={handleInputChange}
+              className='inputbtn2'
+              
             />
             <input
               type="text"
@@ -85,6 +86,7 @@ function Signup() {
               name="username"
               value={userData.username}
               onChange={handleInputChange}
+              className='inputbtn2'
             />
             <input
               type="password"
@@ -92,32 +94,42 @@ function Signup() {
               name="password"
               value={userData.password}
               onChange={handleInputChange}
+              className='inputbtn2'
             />
             <input
-              type="password"
-              placeholder="Confirm Your Password"
-              name="confirmPassword"
-              value={confirmPassword}
-              onChange={(e) => { setConfirmPassword(e.target.value) }}
-            />
-          </div>
-          <button className='flex-1' type="submit">Sign Up</button>
-          </form>
-        ) : <InstaData />}
-          <div className='flex flex-row items-center gap-2'>
-         
-          <button className='flex-1' onClick={(e) => { e.preventDefault(); setIsInstaData(!isInstaData) }}>{isInstaData ? 'Normal Signup' : 'Use InstaData'}</button>
-        </div>
+  type="password"
+  placeholder="Confirm Your Password"
+  name="confirmPassword"
+  value={confirmPassword}
+  onChange={(e) => setConfirmPassword(e.target.value)}
+  className='inputbtn2'
+/>
 
-       
-     
-
-      <div className='flex flex-row gap-3 items-center justify-end'>
-        <p>Already Have an Account ?</p>
-        <a href='/sign-in'><button type='submit'>Sign In</button></a>
+          
+          <button className='signup-button' type="submit">Sign Up</button>
+        </form>
+      ) : (
+        <InstaData />
+      )}
+      <div className='signup-buttons-ig'>
+      <button onClick={(e) => { e.preventDefault(); setIsInstaData(!isInstaData) }} style={{ display: 'flex', alignItems: 'center' }}>
+          <img
+            className="ig-logo"
+            src='https://clipart.info/images/ccovers/1516920567instagram-png-logo-transparent.png'
+            alt="Instagram Logo"
+            className="instagram-icon"
+            style={{ width: '50px', height: '50px', marginRight: '10px' }}
+          />
+          {isInstaData ? 'Signup without Instagram?' : 'Signup with Instagram'}
+        </button>
+      </div>
+      <div className='signin-link'>
+        <p>Already Have an Account?</p>
+        <a href='/sign-in'><button className='signup-buttons'type='submit'>Sign In</button></a>
       </div>
     </div>
   );
 }
+
 
 export default Signup;

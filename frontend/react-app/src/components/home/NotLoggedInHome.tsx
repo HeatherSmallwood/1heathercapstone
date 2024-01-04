@@ -1,9 +1,10 @@
 
+import '../../index.css'
 const NotLoggedInHome = () => {
   return (
     <div className="notLoggedIn">
  
-    <a href="/sign-in">
+    <a className='test_button' href="/sign-in">
       <button type="submit">Sign In</button>
     </a>
     <a href="/sign-up">

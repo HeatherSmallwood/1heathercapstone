@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CreatePost from "../posts/CreatePost";
 import { getPosts } from "../../lib/getPosts";
 import Post from "../posts/Post";
+import Navbar from "../Navbar";
 
 const LoggedInHome = () => {
   const username = window.localStorage.getItem('username');
@@ -18,16 +19,11 @@ const LoggedInHome = () => {
   
 
   return (
-    <div className="flex flex-col gap-5 items-center">
-      <a href={`/${username}`}>
-        <button type="submit">Profile</button>
-      </a>
-      <a href="/sign-in">
-        <button onClick={() => {
-          window.localStorage.removeItem('user_id');
-          window.localStorage.removeItem('username');
-        }} type="submit">Logout</button>
-      </a>
+    <>
+    <Navbar username={username as string} location='home'/>
+    <div className="flex mt-[80px] flex-col gap-5 items-center">
+     
+     
 
 
       <CreatePost setPosts={setPosts}  />
@@ -37,6 +33,7 @@ const LoggedInHome = () => {
         <Post key={key} post={post} setPosts={setPosts}/>
       ))}
     </div>
+    </>
   );
 }
 

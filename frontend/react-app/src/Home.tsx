@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col gap-5 items-center">
-      <h1>Home</h1>
+      
 
       {isLoggedIn && user_id ? (
          <LoggedInHome />

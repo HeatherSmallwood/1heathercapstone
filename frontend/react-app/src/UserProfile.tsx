@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Post from './components/posts/Post';
 import { getUserPosts } from './lib/getUserPosts';
+import Navbar from './components/Navbar';
 
 const UserProfile = () => {
   const { username } = useParams();
@@ -30,20 +31,35 @@ const UserProfile = () => {
 
 
   return (
-    <div className='flex flex-col gap-3 items-center'>
-      <h1>User Profile</h1>
-      <h2>Welcome {username}!</h2>
+    <>
+        <Navbar username={username as string} location='profile'/>
+    <div className='h-[80px] bg-black'/>
+    <div className='flex  flex-col gap-3 items-center'>
 
-     <a href='/'><button type='submit'>Home</button></a>
-     <a href='/sign-in'><button onClick={()=>{
-	window.localStorage.removeItem('user_id')
-    window.localStorage.removeItem('username')         
-        }} type='submit'>Logout</button></a>
+    <div className="video-container">
+          <iframe 
+            src='/mp4/hydroflight.mp4?version=3&rel=0' 
+            width="100%" 
+            height="100%" 
+            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' 
+            allowFullScreen
+            title="User Video"
+            autoPlay // This line is crucial to autoplay the video
+            loop // This line is crucial to loop the video
+          />
+        </div>
+
+      
+
+     
+
+    
 
 {userPosts?.map((post,key) => (
         <Post key={key} post={post} setPosts={setUserPosts}/>
       ))}
     </div>
+    </>
   );
 };
 

@@ -68,7 +68,7 @@ const Post: React.FC<PostProps> = ({ post,setPosts}) => {
         <img
           src={post.img_base64}
           alt="Post"
-          className="max-h-60 w-full object-cover rounded-md mb-2"
+          className="post-box max-h-60 w-[300px] object-cover rounded-md mb-2"
         />
       )}
 
@@ -76,12 +76,12 @@ const Post: React.FC<PostProps> = ({ post,setPosts}) => {
       <div className="flex justify-between">
       <button
         onClick={handleLike}
-        className={`flex items-center text-red-500 ${isLiked ? 'text-red-600' : ''}`}
+        className={`likebutton2 flex items-center text-red-500 ${isLiked ? 'text-red-600' : ''}`}
       >
         {isLiked ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 mr-1"
+            className="isliked h-6 w-6 mr-1"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -120,12 +120,12 @@ const Post: React.FC<PostProps> = ({ post,setPosts}) => {
           Save
         </button>
       ) : (
-        <button onClick={() => setIsEditing(true)} className="bg-blue-500 text-white px-4 py-2 rounded-md">
+        <button onClick={() => setIsEditing(true)} className=" editbtn  text-white px-4 py-2 rounded-md">
           Edit
         </button>
       )}
 
-      <button onClick={handleDelete} className="bg-red-500 text-white px-4 py-2 rounded-md">
+      <button onClick={handleDelete} className="deletebtn text-white px-4 py-2 rounded-md">
         Delete
       </button>
       </div>}

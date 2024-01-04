@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
@@ -19,20 +19,20 @@
 
 a {
 	font-weight: 500;
-	color: #646cff;
+	color:#25a579;
 	text-decoration: inherit;
 }
 a:hover {
-	color: #535bf2;
+	color: #25a579;
 }
-
+/* 
 body {
 	margin: 0;
 	display: flex;
 	place-items: center;
 	width: 100vw;
 	min-height: 100vh;
-}
+}  */
 
 h1 {
 	font-size: 3.2em;
@@ -51,7 +51,7 @@ button {
 	transition: border-color 0.25s;
 }
 button:hover {
-	border-color: #646cff;
+	border-color: #25a579;
 }
 button:focus,
 button:focus-visible {
@@ -64,7 +64,7 @@ button:focus-visible {
 		background-color: #ffffff;
 	}
 	a:hover {
-		color: #747bff;
+		color: #25a579;
 	}
 	button {
 		background-color: #f9f9f9;
@@ -89,4 +89,488 @@ button:focus-visible {
 	font-size: 20px;
 }
 
+/* 
+CSS for the photo strip and tint overlay */
+/* .slideshow-strip {
+	width: 100vw;
+	overflow-x: auto; 
+	white-space: nowrap;
+	padding: 10px 0; 
+	margin: 0;
+  }
+  
+  .slide {
+	height: 350px; 
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	margin-right: 30px;
+	margin-left: 30px; 
+  } */
+  
+  /* .slide-content {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+  }
+  
+  .slide-image {
+	width: 100%; 
+	height: 100%;
+	object-fit: cover; 
+	filter: brightness(60%) grayscale(20%); 
+  } */
+  
+  /* Hide video control for the strip */
+ .video-container{
+	width: 100%;
+	height:200px
+	
+ }
+  /* Update styles for the sign-in and sign-up buttons */
+button[type='submit'] {
+	background-color: #25a579;
+	color: #fff;
+	border: none;
+	padding: 12px 24px;
+	font-size: 1.1em;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  button[type='submit']:hover {
+	background-color: #25a579;
+  }
+  
+  /* Center the form */
+  /* .form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+  }
+  
+  /* Style the input fields */
+  /* input[type='text'],
+  input[type='password'] {
+	width: 300px;
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+  }
+   */ 
+  /* Update the form layout */
+  /* form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+   */
+  /* Additional styles for the overall container */
+  /* .notLoggedIn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	color: #fff;
+	background-color: #242424;
+  } */
+  
+  /* Existing CSS styles */
 
+  .signup-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	width: 80%; /* Adjust the width as needed */
+	margin: 100px auto; /* Set top and bottom margin to 100px, auto for left and right */
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  .signup-container h1 {
+	font-size: 2em;
+	color: #333;
+  }
+  
+  .signup-form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+  }
+  
+  .signup-form input {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+  }
+  
+  .signup-button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #42f46e;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1em;
+  }
+  
+  .signup-button:hover {
+	background-color: #25a579;
+  }
+  
+  .signup-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+  }
+  
+  .signup-buttons button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 15px;
+	background-color: #25a579;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1em;
+  }
+  
+  .signup-buttons button:hover {
+	background-color: #25a579;}
+  
+  .signin-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .signin-link p {
+	margin-right: 5px;
+  }
+
+  .inputbtn2 {
+	border-radius: 9999px; /* For circular shape */
+	background-color: white; /* Blue background color */
+	color: black; /* White text color */
+	padding: 8px 16px; /* Padding */
+	transition: background-color 0.3s ease-in-out; /* Smooth color transition */
+	border: none; /* Remove default border */
+	cursor: pointer; /* Change cursor on hover */
+	
+  }
+  
+  .inputbtn2:hover {
+	background-color: rgb(210, 235, 212); /* Darker blue on hover */
+  }
+  
+
+  /* sign in css */
+
+  /* Adjustments for sign-in page */
+.signin-flex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+  }
+  
+  h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+	font-family: 'Pacifico', cursive;
+  }
+  
+  input[type='text'],
+  input[type='password'] {
+	width: 300px;
+	padding: 10px;
+	border-radius: 15px;
+	border: 1px solid black;
+	margin-bottom: 15px;
+	transition: border-color 0.3s ease-in-out;
+  }
+  
+  button[type='submit'] {
+	width: fit-content;
+	padding: 10px;
+	padding-inline: 40px;
+	border-radius: 15px;
+	border: none;
+	background-color: #25a579;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	
+  }
+  
+  button[type='submit']:hover {
+	background-color: #192e26;
+  }
+  
+  .text-red-600 {
+	color:  #25a579;
+	margin-top: 10px;
+  }
+  /* CSS styles for the footer */
+  .footer-container {
+	margin-bottom: 50px; 
+  }
+  
+  /* Additional styles for the footer content if needed */
+  /* .footer-content {
+	margin-top: 100px;
+	
+  } */
+  
+/*   
+ .p2{
+	margin-bottom: 0px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	transition: border-color 0.3s ease-in-out;
+ } */
+
+ .signin-margin {
+	margin-bottom: 100px; /* Adjust the top margin as needed */
+  }
+  
+  /* Style to push the footer down */
+  nav[aria-label="Footer"] {
+	margin-top: 1.5rem; 
+  }
+
+  /* SignIn.css */
+
+.input-style2 {
+	/* Base styles for the input fields */
+	padding: 8px;
+	border: 1px solid #25a579;
+	border-radius: 70%;
+	transition: border-color 0.3s ease-in-out;
+	
+  }
+  
+ 
+  
+  input[type='text']:focus,
+  input[type='password']:hover{
+	/* Styles when the input field is focused or hovered */
+	outline: none;
+	border-color: #25a579;/* Change to your desired hover color */
+  }
+
+
+  input[type='text']:hover,
+  input[type='password']:focus{
+	/* Styles when the input field is focused or hovered */
+	outline: none;
+	border-color: #25a579;/* Change to your desired hover color */
+  }
+
+  /* SignIn.css */
+
+/* Circle styling */
+.circle {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 40px;
+	height: 40px;
+	background-color: #25a579; /* Green color */
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  /* Letter "T" styling */
+  .t-letter {
+	font-family: 'Pacifico', cursive;
+	color: white; /* Text color for the "T" */
+	font-size: 40px;
+	
+  }
+
+  .circle{
+	margin-top: 20px;
+	margin-left: 20px;
+	position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px; /* Updated width */
+  height: 60px; /* Updated height */
+  background-color: #25a579; /* Green color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	
+  }
+  
+  .upload{
+	background-color: #25a579;
+	border-radius: 15px;
+  }
+
+  .upload:hover{
+	background-color: #192e26;
+  }
+
+  .createPostText {
+	border-color: #192e26;
+
+
+  }
+
+ 
+	.createpostbox {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjust the shadow values as needed */
+		padding: 20px; /* Added padding to emphasize the shadow effect */
+		border: 1px solid #ccc; /* Added border for better visibility */
+		border-radius: 8px;
+		background-color: #fff;
+		margin-bottom: 40px;
+	  }
+
+
+	  .post-box {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjust the shadow values as needed */
+		padding: 20px; /* Added padding to emphasize the shadow effect */
+		border: 1px solid #ccc; /* Added border for better visibility */
+		border-radius: 8px;
+		background-color: #fff;
+		margin-bottom: 20px; /* Added margin for separation between posts */
+	  }
+	  
+	  .likebutton2{
+		color: #2e1923;
+	  }
+
+	  .isliked{
+		color:#25a579;
+		border: #25a579;
+
+	  }
+
+	  .isliked:hover{
+		border-color: #25a579;
+	  }
+
+	  .editbtn{
+		background-color: none;
+		color: #267657;
+	  }
+
+	  .deletebtn{
+		background-color: none;
+		color: #267657;
+	  }
+
+	  /* Remove blue highlight when clicking on elements */
+button,
+input,
+textarea,
+select,
+a {
+  outline: none;
+}
+
+/* Additional styles to handle focused state for accessibility */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+  outline: none;
+  /* Add your custom focus styles here if needed */
+}
+/* Your existing CSS */
+
+/* Add styles for the video container */
+/* .video-container {
+	width: 100%;
+	height: 200px; 
+	overflow: hidden;
+	position: relative;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  } */
+  
+  /* Add styles to the video element */
+  /* .video-container video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+   */
+  /* Apply grayscale effect to the video */
+  /* .video-container video {
+	/* filter: grayscale(80%); */
+  
+   
+  /* Additional styles for the post or other elements as needed */
+  /* ... */
+  /* Slideshow strip styles */
+.slideshow-strip {
+	display: flex;
+	overflow-x: scroll;
+	gap: 20px;
+	padding: 20px 0;
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .slide {
+	min-width: 300px;
+	flex: 0 0 auto;
+	position: relative;
+  }
+  
+  .slide img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* .signup-buttons-ig{
+
+  } */
+
+  .signup-buttons-ig {
+	border: none;
+  }
+  
+  .signup-buttons-ig:hover {
+	outline: none; /* Remove outline on hover */
+	border: none; /* Remove border on hover */
+  }
+  @keyframes bounce {
+	0% {
+	  transform: translateY(0);
+	}
+	50% {
+	  transform: translateY(-10px); /* Adjust the bounce height as needed */
+	}
+	100% {
+	  transform: translateY(0);
+	}
+  }
+  
+  /* Add this class to apply the animation to the T logo */
+  .bouncing-t {
+	animation: bounce 1.8s infinite; /* Adjust the duration as needed */
+  }
+  

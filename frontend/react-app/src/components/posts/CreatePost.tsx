@@ -49,17 +49,17 @@ const CreatePost: React.FC<CreatePostProps> = ({setPosts}) => {
   };
 
   return (
-    <div className="flex flex-col gap-2 p-4 border border-gray-300 rounded-md">
+    <div className="createpostbox flex flex-col gap-2 p-4 border border-gray-300 rounded-md">
       <h1 className="text-xl font-bold mb-2">Create Post</h1>
 
       <textarea
         placeholder="What's on your mind?"
         value={postText}
         onChange={handleTextChange}
-        className="border p-2 rounded-md resize-none"
+        className="createPostText border p-2 rounded-md resize-none"
       />
 
-      <label htmlFor="imageInput" className="cursor-pointer mt-2 mb-4 text-center bg-blue-500 text-white p-2 rounded-md">
+      <label htmlFor="imageInput" className="upload cursor-pointer mt-2 mb-4 text-center bg-blue-500 text-white p-2 rounded-md">
         Upload Image
       </label>
       <input
@@ -72,7 +72,7 @@ const CreatePost: React.FC<CreatePostProps> = ({setPosts}) => {
 
 {imagePreview && <img src={imagePreview} alt="Selected" className="mb-2 max-h-40 max-w-full rounded-md" />}
 
-      <button onClick={handlePostSubmit} className="bg-blue-500 text-white py-2 rounded-md">
+      <button onClick={handlePostSubmit} className= "upload bg-blue-500 text-white py-2 rounded-md">
         Post
       </button>
     </div>

@@ -128,7 +128,7 @@ const InstaData = () => {
 					<button onClick={handleCreateAccount}>
 						{isLoading
 							? 'Creating Account...'
-							: 'Create Your Account with Insta Data'}
+							: 'Create Your Account with Instagram Profile'}
 					</button>
 				</div>
 			)}
