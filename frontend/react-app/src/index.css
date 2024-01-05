@@ -439,7 +439,7 @@ button[type='submit'] {
 		padding: 20px; /* Added padding to emphasize the shadow effect */
 		border: 1px solid #ccc; /* Added border for better visibility */
 		border-radius: 8px;
-		background-color: #fff;
+		background-image: linear-gradient(109.6deg, rgba(247, 253, 166, 1) 11.2%, rgba(128, 255, 221, 1) 57.8%, rgba(255, 128, 249, 1) 85.9%);
 		margin-bottom: 40px;
 	  }
 
@@ -573,4 +573,8 @@ a:focus {
   .bouncing-t {
 	animation: bounce 1.8s infinite; /* Adjust the duration as needed */
   }
-  
+  /* Add this to your existing CSS */
+
+  .flex-bg{
+	background-image: linear-gradient(109.6deg, rgba(247, 253, 166, 1) 11.2%, rgba(128, 255, 221, 1) 57.8%, rgba(255, 128, 249, 1) 85.9%);
+  }

@@ -48,7 +48,21 @@ function SignIn() {
     }));
   };
 
-  return (
+  return ( 
+    <div
+      className='signin-background'
+      style={{
+        backgroundImage: `url('https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700632093.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      {/* ... (rest of your SignIn component content) ... */}
+    
     <div className='signup-container flex flex-col w-full items-center'>
     <div className='flex flex-col w-[500px] gap-4 items-center px-2'>
        <div className='circle'>
@@ -101,6 +115,7 @@ function SignIn() {
   </div>
 </nav>
 
+    </div>
     </div>
     </div>
   );

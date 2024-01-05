@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-
 import InstaData from './InstaData';
-
 
 function Signup() {
   const [userData, setUserData] = useState({
     username: '',
-    imgBase64: '', 
+    imgBase64: '',
     fullName: '',
     password: '',
     email: ''
@@ -58,19 +56,32 @@ function Signup() {
   };
 
   return (
-    <div className='signup-container'>
-      <h1>Sign Up</h1>
-      {error && <p className='error-message'>{error}</p>}
-      {!isInstaData ? (
-        <form onSubmit={handleSubmit} className='signup-form'>
-          <input
-            type="text"
-            placeholder="Enter your Full Name"
-            name="fullName"
-            value={userData.fullName}
-            onChange={handleInputChange}
-            className='inputbtn2'
+    <div
+      className='signup-background'
+      style={{
+        backgroundImage: `url('https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700632093.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <div className='signup-container' style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '20px', borderRadius: '10px' }}>
+        <h1>Sign Up</h1>
+        {error && <p className='error-message'>{error}</p>}
+        {!isInstaData ? (
+          <form onSubmit={handleSubmit} className='signup-form'>
+            <input
+              type="text"
+              placeholder="Enter your Full Name"
+              name="fullName"
+              value={userData.fullName}
+              onChange={handleInputChange}
+              className='inputbtn2'
             />
+                     
             <input
               type="text"
               placeholder="Enter your Email"
@@ -104,32 +115,30 @@ function Signup() {
   onChange={(e) => setConfirmPassword(e.target.value)}
   className='inputbtn2'
 />
-
-          
-          <button className='signup-button' type="submit">Sign Up</button>
-        </form>
-      ) : (
-        <InstaData />
-      )}
-      <div className='signup-buttons-ig'>
-      <button onClick={(e) => { e.preventDefault(); setIsInstaData(!isInstaData) }} style={{ display: 'flex', alignItems: 'center' }}>
-          <img
-            className="ig-logo"
-            src='https://clipart.info/images/ccovers/1516920567instagram-png-logo-transparent.png'
-            alt="Instagram Logo"
-            className="instagram-icon"
-            style={{ width: '50px', height: '50px', marginRight: '10px' }}
-          />
-          {isInstaData ? 'Signup without Instagram?' : 'Signup with Instagram'}
-        </button>
-      </div>
-      <div className='signin-link'>
-        <p>Already Have an Account?</p>
-        <a href='/sign-in'><button className='signup-buttons'type='submit'>Sign In</button></a>
+            <button className='signup-button' type="submit">Sign Up</button>
+          </form>
+        ) : (
+          <InstaData />
+        )}
+        <div className='signup-buttons-ig'>
+          <button onClick={(e) => { e.preventDefault(); setIsInstaData(!isInstaData) }} style={{ display: 'flex', alignItems: 'center' }}>
+            <img
+              className="ig-logo"
+              src='https://clipart.info/images/ccovers/1516920567instagram-png-logo-transparent.png'
+              alt="Instagram Logo"
+              className="instagram-icon"
+              style={{ width: '50px', height: '50px', marginRight: '10px' }}
+            />
+            {isInstaData ? 'Signup without Instagram?' : 'Signup with Instagram'}
+          </button>
+        </div>
+        <div className='signin-link'>
+          <p>Already Have an Account?</p>
+          <a href='/sign-in'><button className='signup-buttons' type='submit'>Sign In</button></a>
+        </div>
       </div>
     </div>
   );
 }
-
 
 export default Signup;

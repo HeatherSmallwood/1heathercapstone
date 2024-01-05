@@ -34,7 +34,7 @@ const UserProfile = () => {
     <>
         <Navbar username={username as string} location='profile'/>
     <div className='h-[80px] bg-black'/>
-    <div className='flex  flex-col gap-3 items-center'>
+    <div className='flex-bg flex flex-col gap-3 items-center'>
 
     <div className="video-container">
           <iframe 
