@@ -187,8 +187,8 @@ button[type='submit'] {
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
-	width: 80%; /* Adjust the width as needed */
-	margin: 100px auto; /* Set top and bottom margin to 100px, auto for left and right */
+	width: 80%; 
+	margin: 100px auto; 
 	padding: 20px;
 	background-color: #f9f9f9;
 	border-radius: 8px;
@@ -259,17 +259,17 @@ button[type='submit'] {
 
   .inputbtn2 {
 	border-radius: 9999px; /* For circular shape */
-	background-color: white; /* Blue background color */
-	color: black; /* White text color */
-	padding: 8px 16px; /* Padding */
+	background-color: white; 
+	color: black; 
+	padding: 8px 16px; 
 	transition: background-color 0.3s ease-in-out; /* Smooth color transition */
-	border: none; /* Remove default border */
-	cursor: pointer; /* Change cursor on hover */
+	border: none; 
+	cursor: pointer; 
 	
   }
   
   .inputbtn2:hover {
-	background-color: rgb(210, 235, 212); /* Darker blue on hover */
+	background-color: rgb(210, 235, 212);
   }
   
 
@@ -367,7 +367,7 @@ button[type='submit'] {
   input[type='password']:hover{
 	/* Styles when the input field is focused or hovered */
 	outline: none;
-	border-color: #25a579;/* Change to your desired hover color */
+	border-color: #25a579;
   }
 
 
@@ -375,7 +375,7 @@ button[type='submit'] {
   input[type='password']:focus{
 	/* Styles when the input field is focused or hovered */
 	outline: none;
-	border-color: #25a579;/* Change to your desired hover color */
+	border-color: #25a579;
   }
 
   /* SignIn.css */
@@ -445,9 +445,9 @@ button[type='submit'] {
 
 
 	  .post-box {
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjust the shadow values as needed */
-		padding: 20px; /* Added padding to emphasize the shadow effect */
-		border: 1px solid #ccc; /* Added border for better visibility */
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+		padding: 20px; 
+		border: 1px solid #ccc; 
 		border-radius: 8px;
 		background-color: #fff;
 		margin-bottom: 20px; /* Added margin for separation between posts */
@@ -486,18 +486,18 @@ a {
   outline: none;
 }
 
-/* Additional styles to handle focused state for accessibility */
+
 button:focus,
 input:focus,
 textarea:focus,
 select:focus,
 a:focus {
   outline: none;
-  /* Add your custom focus styles here if needed */
-}
-/* Your existing CSS */
 
-/* Add styles for the video container */
+}
+
+
+
 /* .video-container {
 	width: 100%;
 	height: 200px; 
@@ -518,10 +518,7 @@ a:focus {
   /* .video-container video {
 	/* filter: grayscale(80%); */
   
-   
-  /* Additional styles for the post or other elements as needed */
-  /* ... */
-  /* Slideshow strip styles */
+
 .slideshow-strip {
 	display: flex;
 	overflow-x: scroll;
@@ -573,7 +570,7 @@ a:focus {
   .bouncing-t {
 	animation: bounce 1.8s infinite; /* Adjust the duration as needed */
   }
-  /* Add this to your existing CSS */
+
 
   .flex-bg{
 	background-image: linear-gradient(109.6deg, rgba(247, 253, 166, 1) 11.2%, rgba(128, 255, 221, 1) 57.8%, rgba(255, 128, 249, 1) 85.9%);

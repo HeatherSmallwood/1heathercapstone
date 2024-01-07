@@ -61,7 +61,7 @@ function SignIn() {
         alignItems: 'center',
       }}
     >
-      {/* ... (rest of your SignIn component content) ... */}
+      
     
     <div className='signup-container flex flex-col w-full items-center'>
     <div className='flex flex-col w-[500px] gap-4 items-center px-2'>
@@ -109,7 +109,7 @@ function SignIn() {
 
       <nav aria-label="Footer" role="navigation" className="footer-container">
   {/* Footer content */}
-  {/* ... your footer links */}
+  
   <div className="footer-content mt-4">
     <span className="footer-text absolute bottom-5 ">© 2024 TEO Corp. </span>
   </div>
